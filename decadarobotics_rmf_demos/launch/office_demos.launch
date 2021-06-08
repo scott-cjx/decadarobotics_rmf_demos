@@ -9,15 +9,15 @@
   <!-- Common launch -->
   <include file="$(find-pkg-share rmf_demos)/common.launch.xml">
     <arg name="use_sim_time" value="$(var use_sim_time)"/>
-    <!-- <arg name="viz_config_file" value ="$(find-pkg-share rmf_demos)/include/office/office.rviz"/> -->
-    <arg name="config_file" value="$(find-pkg-share decadarobotics_rmf_demos_maps)/mbc/mbc.building.yaml"/>
-    <!-- <arg name="dashboard_config_file" value="$(find-pkg-share rmf_demos_dashboard_resources)/office/dashboard_config.json"/> -->
+    <arg name="viz_config_file" value ="$(find-pkg-share rmf_demos)/include/office/office.rviz"/>
+    <arg name="config_file" value="$(find-pkg-share rmf_demos_maps)/office/office.building.yaml"/>
+    <arg name="dashboard_config_file" value="$(find-pkg-share rmf_demos_dashboard_resources)/office/dashboard_config.json"/>
   </include>
 
   <!-- Simulation launch -->
   <include file="$(find-pkg-share rmf_demos)/simulation.launch.xml">
-    <arg name="map_name" value="mbc" />
-    <arg name="map_package" value="decadarobotics_rmf_demos_maps" />
+    <arg name="map_name" value="office" />
+    <arg name="map_package" value="rmf_demos_maps" />
     <arg name="use_ignition" value="$(var use_ignition)" />
     <arg name="gazebo_version" value="$(var gazebo_version)" />
   </include>
@@ -66,10 +66,10 @@
       different from that of RMF globally. In order to transform a pose from the RMF
       frame to the free fleet robot frame, it is first scaled, rotated, then
       translated using these parameters -->
-      <param name="scale" value="0"/>
-      <param name="rotation" value="0"/>
-      <param name="translation_x" value="0"/>
-      <param name="translation_y" value="0"/>
+      <param name="scale" value="0.0"/>
+      <param name="rotation" value="0.0"/>
+      <param name="translation_x" value="0.0"/>
+      <param name="translation_y" value="0.0"/>
     </node>
   </group>
 
